@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int t;
+    cin >> t; // Input number of test cases
+    while (t--) {
+        int n, k;
+        cin >> n >> k;
+        vector<int> arr(n); // Define vector with size n
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i]; // Input elements into the vector
+        }
+ 
+        // Check if k == 1 and array is not sorted
+        if (k == 1 && !is_sorted(arr.begin(), arr.end())) {
+            cout << "NO" << endl;
+        } else {
+            cout << "YES" << endl;
+        }
+    }
+    return 0;
+}
